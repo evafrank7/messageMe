@@ -19,4 +19,12 @@
 
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
+
+  $(document).on('click', '.message .close', function() {
+    $(this).closest('.message').transition('fade');
+  });
+
+  $(document).on('turbolinks:before-cache', function() {
+    $('.ui.dropdown').dropdown('destroy');
+  });
 });
