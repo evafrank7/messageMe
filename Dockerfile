@@ -26,8 +26,8 @@ ENV RACK_ENV=production
 ENV RAILS_LOG_TO_STDOUT=true
 ENV RAILS_SERVE_STATIC_FILES=true
 
-# Precompile assets during build
-RUN bundle exec rake assets:precompile
+# Assets precompile needs SECRET_KEY_BASE in production
+RUN SECRET_KEY_BASE=dummy bundle exec rake assets:precompile
 
 # Render expects your web service to bind on 0.0.0.0 and port 10000 by default
 EXPOSE 10000
