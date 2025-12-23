@@ -80,7 +80,7 @@ GEM
     execjs (2.10.0)
     ffi (1.17.2)
     ffi (1.17.2-arm64-darwin)
-    ffi (1.17.2-x86_64-linux-gnu)
+    ffi (1.17.2-x86_64-linux)
     globalid (1.1.0)
       activesupport (>= 5.0)
     hirb (0.7.3)
@@ -201,8 +201,6 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.7.3)
       mini_portile2 (~> 2.8.0)
-    sqlite3 (1.7.3-arm64-darwin)
-    sqlite3 (1.7.3-x86_64-linux)
     thor (1.4.0)
     thread_safe (0.3.6)
     tilt (2.6.1)
@@ -258,7 +256,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 3.2.9p265
+   ruby 2.7.8p225
 
 BUNDLED WITH
    2.4.22
