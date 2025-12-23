@@ -13,7 +13,10 @@ WORKDIR /app
 
 # Install gems first (better layer caching)
 COPY Gemfile Gemfile.lock ./
-RUN gem install bundler -v 2.4.22 && bundle install
+# Force Ruby platform for native gems to avoid linux platform mismatch (e.g., ffi)
+RUN gem install bundler -v 2.4.22 \
+  && bundle config set force_ruby_platform true \
+  && bundle install
 
 # Copy the app
 COPY . .
