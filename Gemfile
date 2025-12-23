@@ -5,6 +5,8 @@ ruby '3.2.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
+# Rails 5.2 is not compatible with Rack 2.2+
+gem 'rack', '< 2.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
